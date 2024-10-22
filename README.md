@@ -1,6 +1,7 @@
 # 10Gbps server one-click optimization
 
-This project is designed to optimize the performance of servers with 10Gbps or higher bandwidth by configuring various system and network settings. The script `oco.py` provides functionalities such as setting IRQ affinity, configuring RPS/RFS, adjusting ring buffer sizes, and more.
+This project is designed to optimize the performance of servers with 10Gbps or higher bandwidth by configuring various system and network settings. The script `oco.py` provides functionalities such as setting IRQ affinity, configuring RPS/RFS, adjusting ring buffer sizes, setting kernel parameters, file limits, network queues, and more.
+
 
 ## Prerequisites
 
@@ -52,6 +53,17 @@ To run all functions:
 ```sh
 sudo python3 oco.py --all
 ```
+
+### Features
+
+- IRQ Affinity: Distribute network card IRQs across CPU cores to balance the load.
+- RPS/RFS Configuration: Configure Receive Packet Steering (RPS) and Receive Flow Steering (RFS) to improve network performance.
+- Ring Buffer Size: Adjust the ring buffer size for network cards to optimize packet handling.
+- Kernel Parameters: Set various kernel parameters to optimize system performance.
+- File Limits: Increase file descriptor limits to handle more concurrent connections.
+- Network Queues: Configure network queues to improve packet processing efficiency.
+- CPU Performance: Set CPU performance to maximum mode for better handling of high network traffic.
+- Auto Start: Setup the script to run automatically at system startup.
 
 ### Configuration
 
